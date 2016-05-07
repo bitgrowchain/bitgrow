@@ -71,7 +71,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     rpcConsole(0)
 {
     resize(850, 550);
-    setWindowTitle(tr("Peercoin (bitGrow) Wallet"));
+    setWindowTitle(tr("bitgrow (bitGrow) Wallet"));
 #ifndef Q_WS_MAC
     setWindowIcon(QIcon(":icons/bitgrow"));
 #else
