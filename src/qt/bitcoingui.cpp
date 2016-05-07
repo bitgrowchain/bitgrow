@@ -1,5 +1,5 @@
 /*
- * Qt4 ppcoin GUI.
+ * Qt4 bitgrow GUI.
  *
  * W.J. van der Laan 2011-2012
  * The Bitcoin Developers 2011-2012
@@ -73,7 +73,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     resize(850, 550);
     setWindowTitle(tr("Peercoin (bitGrow) Wallet"));
 #ifndef Q_WS_MAC
-    setWindowIcon(QIcon(":icons/ppcoin"));
+    setWindowIcon(QIcon(":icons/bitgrow"));
 #else
     setUnifiedTitleAndToolBarOnMac(true);
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
@@ -204,7 +204,7 @@ void BitcoinGUI::createActions()
     tabGroup->addAction(receiveCoinsAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send coins"), this);
-    sendCoinsAction->setToolTip(tr("Send coins to a ppcoin address"));
+    sendCoinsAction->setToolTip(tr("Send coins to a bitgrow address"));
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
     tabGroup->addAction(sendCoinsAction);
@@ -233,16 +233,16 @@ void BitcoinGUI::createActions()
     quitAction->setToolTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/ppcoin"), tr("&About %1").arg(qApp->applicationName()), this);
+    aboutAction = new QAction(QIcon(":/icons/bitgrow"), tr("&About %1").arg(qApp->applicationName()), this);
     aboutAction->setToolTip(tr("Show information about bitGrow"));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutQtAction = new QAction(tr("About &Qt"), this);
     aboutQtAction->setToolTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setToolTip(tr("Modify configuration options for ppcoin"));
+    optionsAction->setToolTip(tr("Modify configuration options for bitgrow"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
-    toggleHideAction = new QAction(QIcon(":/icons/ppcoin"), tr("Show/Hide &bitGrow"), this);
+    toggleHideAction = new QAction(QIcon(":/icons/bitgrow"), tr("Show/Hide &bitGrow"), this);
     toggleHideAction->setToolTip(tr("Show or hide the bitGrow window"));
     exportAction = new QAction(QIcon(":/icons/export"), tr("&Export..."), this);
     exportAction->setToolTip(tr("Export the data in the current tab to a file"));
@@ -327,9 +327,9 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
             QString title_testnet = windowTitle() + QString(" ") + tr("[testnet]");
             setWindowTitle(title_testnet);
 #ifndef Q_WS_MAC
-            setWindowIcon(QIcon(":icons/ppcoin_testnet"));
+            setWindowIcon(QIcon(":icons/bitgrow_testnet"));
 #else
-            MacDockIconHandler::instance()->setIcon(QIcon(":icons/ppcoin_testnet"));
+            MacDockIconHandler::instance()->setIcon(QIcon(":icons/bitgrow_testnet"));
 #endif
             if(trayIcon)
             {
@@ -415,7 +415,7 @@ void BitcoinGUI::createTrayIcon()
     trayIconMenu->addAction(quitAction);
 #endif
 
-    notificator = new Notificator(tr("ppcoin-qt"), trayIcon);
+    notificator = new Notificator(tr("bitgrow-qt"), trayIcon);
 }
 
 #ifndef Q_WS_MAC

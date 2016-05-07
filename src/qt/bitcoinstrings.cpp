@@ -11,12 +11,12 @@ static const char UNUSED *bitcoin_strings[] = {QT_TRANSLATE_NOOP("bitcoin-core",
 QT_TRANSLATE_NOOP("bitcoin-core", "Warning: Disk space is low  "),
 QT_TRANSLATE_NOOP("bitcoin-core", "bitGrow version"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Usage:"),
-QT_TRANSLATE_NOOP("bitcoin-core", "Send command to -server or ppcoind"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Send command to -server or bitgrowd"),
 QT_TRANSLATE_NOOP("bitcoin-core", "List commands"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Get help for a command"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Options:"),
-QT_TRANSLATE_NOOP("bitcoin-core", "Specify configuration file (default: ppcoin.conf)"),
-QT_TRANSLATE_NOOP("bitcoin-core", "Specify pid file (default: ppcoind.pid)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Specify configuration file (default: bitgrow.conf)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Specify pid file (default: bitgrowd.pid)"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Generate coins"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Don't generate coins"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Start minimized"),
@@ -104,7 +104,7 @@ QT_TRANSLATE_NOOP("bitcoin-core", ""
 "%s, you must set a rpcpassword in the configuration file:\n"
 " %s\n"
 "It is recommended you use the following random password:\n"
-"rpcuser=ppcoinrpc\n"
+"rpcuser=bitgrowrpc\n"
 "rpcpassword=%s\n"
 "(you do not need to remember this password)\n"
 "If the file does not exist, create it with owner-readable-only file "

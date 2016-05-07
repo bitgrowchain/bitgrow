@@ -179,13 +179,13 @@ bool AppInit2(int argc, char* argv[])
         string strUsage = string() +
           _("bitGrow version") + " " + FormatFullVersion() + "\n\n" +
           _("Usage:") + "\t\t\t\t\t\t\t\t\t\t\n" +
-            "  ppcoind [options]                   \t  " + "\n" +
-            "  ppcoind [options] <command> [params]\t  " + _("Send command to -server or ppcoind") + "\n" +
-            "  ppcoind [options] help              \t\t  " + _("List commands") + "\n" +
-            "  ppcoind [options] help <command>    \t\t  " + _("Get help for a command") + "\n" +
+            "  bitgrowd [options]                   \t  " + "\n" +
+            "  bitgrowd [options] <command> [params]\t  " + _("Send command to -server or bitgrowd") + "\n" +
+            "  bitgrowd [options] help              \t\t  " + _("List commands") + "\n" +
+            "  bitgrowd [options] help <command>    \t\t  " + _("Get help for a command") + "\n" +
           _("Options:") + "\n" +
-            "  -conf=<file>     \t\t  " + _("Specify configuration file (default: ppcoin.conf)") + "\n" +
-            "  -pid=<file>      \t\t  " + _("Specify pid file (default: ppcoind.pid)") + "\n" +
+            "  -conf=<file>     \t\t  " + _("Specify configuration file (default: bitgrow.conf)") + "\n" +
+            "  -pid=<file>      \t\t  " + _("Specify pid file (default: bitgrowd.pid)") + "\n" +
             "  -gen             \t\t  " + _("Generate coins") + "\n" +
             "  -gen=0           \t\t  " + _("Don't generate coins") + "\n" +
             "  -min             \t\t  " + _("Start minimized") + "\n" +
@@ -196,7 +196,7 @@ bool AppInit2(int argc, char* argv[])
             "  -timeout=<n>     \t  "   + _("Specify connection timeout (in milliseconds)") + "\n" +
             "  -proxy=<ip:port> \t  "   + _("Connect through socks4 proxy") + "\n" +
             "  -dns             \t  "   + _("Allow DNS lookups for addnode and connect") + "\n" +
-            "  -port=<port>     \t\t  " + _("Listen for connections on <port> (default: 9901 or testnet: 9903)") + "\n" +
+            "  -port=<port>     \t\t  " + _("Listen for connections on <port> (default: 15901 or testnet: 15903)") + "\n" +
             "  -maxconnections=<n>\t  " + _("Maintain at most <n> connections to peers (default: 125)") + "\n" +
             "  -addnode=<ip>    \t  "   + _("Add a node to connect to and attempt to keep the connection open") + "\n" +
             "  -connect=<ip>    \t\t  " + _("Connect only to the specified node") + "\n" +
@@ -295,7 +295,7 @@ bool AppInit2(int argc, char* argv[])
 
 #ifndef QT_GUI
     for (int i = 1; i < argc; i++)
-        if (!IsSwitchChar(argv[i][0]) && !(strlen(argv[i]) >= 7 && strncasecmp(argv[i], "ppcoin:", 7) == 0))
+        if (!IsSwitchChar(argv[i][0]) && !(strlen(argv[i]) >= 7 && strncasecmp(argv[i], "bitgrow:", 7) == 0))
             fCommandLine = true;
 
     if (fCommandLine)
@@ -357,7 +357,7 @@ bool AppInit2(int argc, char* argv[])
     // Load data files
     //
     if (fDaemon)
-        fprintf(stdout, "ppcoin server starting\n");
+        fprintf(stdout, "bitgrow server starting\n");
     int64 nStart;
 
     InitMessage(_("Loading addresses..."));
@@ -585,7 +585,7 @@ bool AppInit2(int argc, char* argv[])
             ThreadSafeMessageBox(_("Warning: -paytxfee is set very high.  This is the transaction fee you will pay if you send a transaction."), _("bitGrow"), wxOK | wxICON_EXCLAMATION | wxMODAL);
     }
 
-    if (mapArgs.count("-reservebalance")) // ppcoin: reserve balance amount
+    if (mapArgs.count("-reservebalance")) // bitgrow: reserve balance amount
     {
         int64 nReserveBalance = 0;
         if (!ParseMoney(mapArgs["-reservebalance"], nReserveBalance))
@@ -595,7 +595,7 @@ bool AppInit2(int argc, char* argv[])
         }
     }
 
-    if (mapArgs.count("-checkpointkey")) // ppcoin: checkpoint master priv key
+    if (mapArgs.count("-checkpointkey")) // bitgrow: checkpoint master priv key
     {
         if (!Checkpoints::SetCheckpointPrivKey(GetArg("-checkpointkey", "")))
             ThreadSafeMessageBox(_("Unable to sign checkpoint, wrong checkpointkey?\n"), _("bitGrow"), wxOK | wxMODAL);
