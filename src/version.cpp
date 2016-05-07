@@ -29,15 +29,15 @@ const std::string CLIENT_NAME("Satoshi");
 // finally CLIENT_VERSION_SUFFIX is added
 
 // First, include build.h if requested
-#ifdef HAVE_BUILD_INFO
-#    include "build.h"
-#endif
+//#ifdef HAVE_BUILD_INFO
+//#    include "build.h"
+//#endif
 
 // git will put "#define GIT_ARCHIVE 1" on the next line inside archives. $Format:%n#define GIT_ARCHIVE 1$
-#ifdef GIT_ARCHIVE
-#    define GIT_COMMIT_ID "$Format:%h$"
-#    define GIT_COMMIT_DATE "$Format:%cD"
-#endif
+//#ifdef GIT_ARCHIVE
+//#    define GIT_COMMIT_ID "$Format:%h$"
+//#    define GIT_COMMIT_DATE "$Format:%cD"
+//#endif
 
 #define STRINGIFY(s) #s
 
@@ -45,13 +45,13 @@ const std::string CLIENT_NAME("Satoshi");
     "v" STRINGIFY(maj) "." STRINGIFY(min) "." STRINGIFY(rev) "." STRINGIFY(build) "-g" commit
 
 #define BUILD_DESC_FROM_UNKNOWN(maj,min,rev,build) \
-    "v" STRINGIFY(maj) "." STRINGIFY(min) "." STRINGIFY(rev) "." STRINGIFY(build) "-unk"
+    "v" STRINGIFY(maj) "." STRINGIFY(min) "." STRINGIFY(rev) "." STRINGIFY(build) "-oreo"
 
 #ifndef BUILD_DESC
 #    ifdef GIT_COMMIT_ID
-#        define BUILD_DESC BUILD_DESC_FROM_COMMIT(PPCOIN_VERSION_MAJOR, PPCOIN_VERSION_MINOR, PPCOIN_VERSION_REVISION, PPCOIN_VERSION_BUILD, GIT_COMMIT_ID)
+#        define BUILD_DESC BUILD_DESC_FROM_COMMIT(bitgrow_VERSION_MAJOR, bitgrow_VERSION_MINOR, bitgrow_VERSION_REVISION, bitgrow_VERSION_BUILD, GIT_COMMIT_ID)
 #    else
-#        define BUILD_DESC BUILD_DESC_FROM_UNKNOWN(PPCOIN_VERSION_MAJOR, PPCOIN_VERSION_MINOR, PPCOIN_VERSION_REVISION, PPCOIN_VERSION_BUILD)
+#        define BUILD_DESC BUILD_DESC_FROM_UNKNOWN(bitgrow_VERSION_MAJOR, bitgrow_VERSION_MINOR, bitgrow_VERSION_REVISION, bitgrow_VERSION_BUILD)
 #    endif
 #endif
 

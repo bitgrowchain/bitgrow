@@ -15,7 +15,7 @@
 #include <string>
 #include "uint256.h"
 
-#define PPCOIN_PORT  15901
+#define bitgrow_PORT  15901
 #define RPC_PORT     15902
 #define TESTNET_PORT 15903
 #define TESTNET_RPC_PORT 15904
@@ -26,7 +26,7 @@ void GetMessageStart(unsigned char pchMessageStart[], bool fPersistent = false);
 
 static inline unsigned short GetDefaultPort(const bool testnet = fTestNet)
 {
-    return testnet ? TESTNET_PORT : PPCOIN_PORT;
+    return testnet ? TESTNET_PORT : bitgrow_PORT;
 }
 
 

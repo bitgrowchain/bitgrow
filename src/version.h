@@ -28,16 +28,16 @@ extern const std::string CLIENT_BUILD;
 extern const std::string CLIENT_DATE;
 
 // bitgrow version - intended for display purpose ONLY
-#define PPCOIN_VERSION_MAJOR       0
-#define PPCOIN_VERSION_MINOR       5
-#define PPCOIN_VERSION_REVISION    4
-#define PPCOIN_VERSION_BUILD       0
+#define bitgrow_VERSION_MAJOR       0
+#define bitgrow_VERSION_MINOR       1
+#define bitgrow_VERSION_REVISION    1
+#define bitgrow_VERSION_BUILD       0
 
-static const int PPCOIN_VERSION =
-                           1000000 * PPCOIN_VERSION_MAJOR
-                         +   10000 * PPCOIN_VERSION_MINOR
-                         +     100 * PPCOIN_VERSION_REVISION
-                         +       1 * PPCOIN_VERSION_BUILD;
+static const int bitgrow_VERSION =
+                           1000000 * bitgrow_VERSION_MAJOR
+                         +   10000 * bitgrow_VERSION_MINOR
+                         +     100 * bitgrow_VERSION_REVISION
+                         +       1 * bitgrow_VERSION_BUILD;
 
 //
 // network protocol versioning
