@@ -1645,8 +1645,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="5"/>
-        <source>Send command to -server or ppcoind</source>
-        <translation>Send kommando til -server eller ppcoind</translation>
+        <source>Send command to -server or bitgrowd</source>
+        <translation>Send kommando til -server eller bitgrowd</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="6"/>
@@ -1670,8 +1670,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="10"/>
-        <source>Specify pid file (default: ppcoind.pid)</source>
-        <translation>Angi pid-fil (standardverdi: ppcoind.pid)</translation>
+        <source>Specify pid file (default: bitgrowd.pid)</source>
+        <translation>Angi pid-fil (standardverdi: bitgrowd.pid)</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="11"/>

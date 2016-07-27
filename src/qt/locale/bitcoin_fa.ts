@@ -1646,7 +1646,7 @@ p, li { white-space: pre-wrap; }⏎
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="5"/>
-        <source>Send command to -server or ppcoind</source>
+        <source>Send command to -server or bitgrowd</source>
         <translation>ارسال فرمان به سرور یا باتکویین</translation>
     </message>
     <message>
@@ -1671,8 +1671,8 @@ p, li { white-space: pre-wrap; }⏎
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="10"/>
-        <source>Specify pid file (default: ppcoind.pid)</source>
-        <translation>(ppcoind.pidپیش فرض : ) فایل پید خاص</translation>
+        <source>Specify pid file (default: bitgrowd.pid)</source>
+        <translation>(bitgrowd.pidپیش فرض : ) فایل پید خاص</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="11"/>

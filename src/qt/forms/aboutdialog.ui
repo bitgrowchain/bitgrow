@@ -86,9 +86,9 @@
       </layout>
      </item>
      <item>
-      <widget class="QLabel" name="label_ppcoin_copyright">
+      <widget class="QLabel" name="label_bitgrow_copyright">
        <property name="text">
-        <string>Copyright © 2011-2016 Peercoin Developers</string>
+        <string>Copyright © 2011-2016 bitgrow Developers</string>
        </property>
        <property name="wordWrap">
         <bool>true</bool>

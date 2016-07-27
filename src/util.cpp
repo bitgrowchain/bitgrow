@@ -777,7 +777,7 @@ void FormatException(char* pszMessage, std::exception* pex, const char* pszThrea
     pszModule[0] = '\0';
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "ppcoin";
+    const char* pszModule = "bitgrow";
 #endif
     if (pex)
         snprintf(pszMessage, 1000,
@@ -854,7 +854,7 @@ boost::filesystem::path GetDefaultDataDir()
 
     // Windows: C:\Documents and Settings\username\Application Data\bitGrow
     // Mac: ~/Library/Application Support/bitGrow
-    // Unix: ~/.ppcoin
+    // Unix: ~/.bitgrow
 #ifdef WIN32
     // Windows
     return MyGetSpecialFolderPath(CSIDL_APPDATA, true) / "bitGrow";
@@ -872,7 +872,7 @@ boost::filesystem::path GetDefaultDataDir()
     return pathRet / "bitGrow";
 #else
     // Unix
-    return pathRet / ".ppcoin";
+    return pathRet / ".bitgrow";
 #endif
 #endif
 }
@@ -916,7 +916,7 @@ boost::filesystem::path GetConfigFile()
 {
     namespace fs = boost::filesystem;
 
-    fs::path pathConfigFile(GetArg("-conf", "ppcoin.conf"));
+    fs::path pathConfigFile(GetArg("-conf", "bitgrow.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -952,7 +952,7 @@ boost::filesystem::path GetPidFile()
 {
     namespace fs = boost::filesystem;
 
-    fs::path pathPidFile(GetArg("-pid", "ppcoind.pid"));
+    fs::path pathPidFile(GetArg("-pid", "bitgrowd.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
@@ -1116,7 +1116,7 @@ std::string FormatSubVersion(const std::string& name, int nClientVersion, const 
     if (!comments.empty())
         ss << "(" << boost::algorithm::join(comments, "; ") << ")";
     ss << "/";
-    ss << "Peercoin:" << FormatVersion(PPCOIN_VERSION);
+    ss << "bitgrow:" << FormatVersion(bitgrow_VERSION);
     ss << "(" << CLIENT_BUILD << ")/";
     return ss.str();
 }
@@ -1205,7 +1205,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "ppcoin.desktop";
+    return GetAutostartDir() / "bitgrow.desktop";
 }
 
 bool GetStartOnSystemStartup()

@@ -48,7 +48,7 @@ namespace Checkpoints
     bool IsSyncCheckpointTooOld(unsigned int nSeconds);
 }
 
-// ppcoin: synchronized checkpoint
+// bitgrow: synchronized checkpoint
 class CUnsignedSyncCheckpoint
 {
 public:

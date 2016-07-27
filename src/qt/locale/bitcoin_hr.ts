@@ -1639,8 +1639,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="5"/>
-        <source>Send command to -server or ppcoind</source>
-        <translation>Pošalji komandu usluzi -server ili ppcoind</translation>
+        <source>Send command to -server or bitgrowd</source>
+        <translation>Pošalji komandu usluzi -server ili bitgrowd</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="6"/>
@@ -1664,7 +1664,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="10"/>
-        <source>Specify pid file (default: ppcoind.pid)</source>
+        <source>Specify pid file (default: bitgrowd.pid)</source>
         <translation>Odredi proces ID datoteku (ugrađeni izbor: bitGrow.pid)</translation>
     </message>
     <message>
