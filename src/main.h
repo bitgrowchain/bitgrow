@@ -35,7 +35,7 @@ static const unsigned int MAX_ORPHAN_TRANSACTIONS = 100;
 static const int64 MIN_TX_FEE = CENT;
 static const int64 MIN_RELAY_TX_FEE = CENT;
 static const int64 MAX_MONEY = 44000000 * COIN;
-tatic const int64 MAX_MINT_PROOF_OF_WORK = 50 * COIN;
+static const int64 MAX_MINT_PROOF_OF_WORK = 50 * COIN;
 static const int64 MIN_TXOUT_AMOUNT = MIN_TX_FEE;
 inline bool MoneyRange(int64 nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 static const int COINBASE_MATURITY_PPC = 500;
