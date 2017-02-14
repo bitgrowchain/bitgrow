@@ -15,11 +15,15 @@ Project Goals (short term)
 - Identify Short-Term Development focus
 -- Decentralized Encrypted Email
 -- Decentralized identity Access Management
+-- Decentralized Content Management and Distrubution on-chain
 
 ## BitGrow is a next generation crypto based blockchain
 - Community Based Project to enable P2P services and payment
 - Developers and Community Members wanted
 
+## Decentralized Email
+- Emails can be sent using user-friendly names, will require client
+- Android/iOS Client w/ thin node
 
 Repo Guidelines
 ================================
