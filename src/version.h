@@ -15,7 +15,7 @@
 #define CLIENT_VERSION_MAJOR       0
 #define CLIENT_VERSION_MINOR       6
 #define CLIENT_VERSION_REVISION    3
-#define CLIENT_VERSION_BUILD       2
+#define CLIENT_VERSION_BUILD       3
 
 static const int CLIENT_VERSION =
                            1000000 * CLIENT_VERSION_MAJOR
@@ -31,7 +31,7 @@ extern const std::string CLIENT_DATE;
 #define bitgrow_VERSION_MAJOR       0
 #define bitgrow_VERSION_MINOR       1
 #define bitgrow_VERSION_REVISION    1
-#define bitgrow_VERSION_BUILD       2
+#define bitgrow_VERSION_BUILD       3
 
 static const int bitgrow_VERSION =
                            1000000 * bitgrow_VERSION_MAJOR
@@ -43,7 +43,7 @@ static const int bitgrow_VERSION =
 // network protocol versioning
 //
 
-static const int PROTOCOL_VERSION = 60006;
+static const int PROTOCOL_VERSION = 60007;
 
 // earlier versions not supported as of Feb 2012, and are disconnected
 // NOTE: as of bitcoin v0.6 message serialization (vSend, vRecv) still
