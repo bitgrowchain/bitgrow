@@ -923,7 +923,7 @@ int64 GetProofOfWorkReward(unsigned int nBits)
     int64 nSubsidy = bnUpperBound.getuint64();
     nSubsidy = (nSubsidy / CENT) * CENT;
 
-    if (nBestHeight > 10 && nSubsidy < 10) {
+    if (nBestHeight > 56555 && nSubsidy < 10) {
         nSubsidy = 10.0999 * COIN;
         printf("nSubsidy Changed %i \n", nSubsidy); }
 
