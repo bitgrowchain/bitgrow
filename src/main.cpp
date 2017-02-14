@@ -922,6 +922,11 @@ int64 GetProofOfWorkReward(unsigned int nBits)
 
     int64 nSubsidy = bnUpperBound.getuint64();
     nSubsidy = (nSubsidy / CENT) * CENT;
+
+    if (nBestHeight > 10 && nSubsidy < 10) {
+        nSubsidy = 10.0999 * COIN;
+        printf("nSubsidy Changed %i \n", nSubsidy); }
+
     if (fDebug && GetBoolArg("-printcreation"))
         printf("GetProofOfWorkReward() : create=%s nBits=0x%08x nSubsidy=%"PRI64d"\n", FormatMoney(nSubsidy).c_str(), nBits, nSubsidy);
 
