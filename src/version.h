@@ -31,7 +31,7 @@ extern const std::string CLIENT_DATE;
 #define bitgrow_VERSION_MAJOR       0
 #define bitgrow_VERSION_MINOR       1
 #define bitgrow_VERSION_REVISION    1
-#define bitgrow_VERSION_BUILD       3
+#define bitgrow_VERSION_BUILD       4
 
 static const int bitgrow_VERSION =
                            1000000 * bitgrow_VERSION_MAJOR
